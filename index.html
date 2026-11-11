@@ -1,0 +1,1975 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>有栖绯花观看 - 作品动态与深度指南</title>
+  <meta name="description" content="有栖绯花观看内容聚合页，汇集有栖绯花近期作品条目、分类索引、观看顺序指南与用户评论。涵盖VR作品、共演名单、发售日历与讨论热度，适合关注该演员动态的观众浏览。">
+  <meta name="keywords" content="有栖绯花观看">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='42' fill='%23d94f6b'/%3E%3Ctext x='50' y='68' font-size='48' text-anchor='middle' fill='%23fff' font-family='sans-serif'%3E绯%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --primary: #c23b5b;
+      --primary-light: #fce8ec;
+      --primary-dark: #8e2740;
+      --bg: #fdf8f6;
+      --surface: #ffffff;
+      --text-primary: #1e1a1b;
+      --text-secondary: #5e5457;
+      --text-tertiary: #948b8e;
+      --border: #e8dedf;
+      --radius-card: 12px;
+      --radius-btn: 8px;
+      --radius-tag: 20px;
+      --shadow-default: 0 2px 8px rgba(0, 0, 0, 0.05);
+      --shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.08);
+      --font: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', system-ui, sans-serif;
+      --sticky-offset: 128px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--sticky-offset);
+    }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.65;
+      font-size: 15px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; animation: none !important; }
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    a:hover { color: var(--primary-dark); }
+    a:focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* 吸顶组合 */
+    .sticky-group {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .announce-bar {
+      background: var(--primary-dark);
+      color: #fff;
+      font-size: 13px;
+      padding: 8px 0;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .announce-bar .brand-tag {
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      background: rgba(255, 255, 255, 0.18);
+      padding: 1px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+    }
+    .announce-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .announce-item .date {
+      color: #ffd9e0;
+      font-weight: 600;
+    }
+    .announce-item .sep {
+      opacity: 0.5;
+    }
+
+    .site-header {
+      background: rgba(253, 248, 246, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 0;
+    }
+    .header-inner {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--text-primary);
+      white-space: nowrap;
+    }
+    .logo svg {
+      width: 34px;
+      height: 34px;
+      flex-shrink: 0;
+    }
+    .logo span {
+      color: var(--primary);
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+      flex: 1;
+    }
+    .main-nav a {
+      padding: 6px 12px;
+      border-radius: var(--radius-btn);
+      color: var(--text-secondary);
+      font-size: 14px;
+      font-weight: 500;
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+    .main-nav a:hover {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+    }
+    .main-nav a.active {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .btn-outline {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      padding: 6px 16px;
+      border-radius: var(--radius-btn);
+      font-size: 13px;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: var(--font);
+    }
+    .btn-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 6px 18px;
+      border-radius: var(--radius-btn);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-family: var(--font);
+    }
+    .btn-primary:hover { background: var(--primary-dark); }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-btn);
+      width: 38px;
+      height: 38px;
+      cursor: pointer;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      background: var(--text-secondary);
+      border-radius: 1px;
+      transition: 0.2s;
+    }
+
+    /* 首屏 */
+    .hero {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 36px 24px 28px;
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 40px;
+      align-items: center;
+    }
+    .hero-content h1 {
+      font-size: 38px;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: 1px;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+    }
+    .hero-content h1 span {
+      color: var(--primary);
+    }
+    .hero-desc {
+      font-size: 16px;
+      color: var(--text-secondary);
+      max-width: 580px;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    .hero-meta {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: var(--text-tertiary);
+      margin-bottom: 22px;
+    }
+    .hero-meta strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .hero-actions a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 22px;
+      border-radius: var(--radius-btn);
+      font-weight: 500;
+      font-size: 15px;
+      transition: all 0.2s;
+    }
+    .hero-actions .primary-cta {
+      background: var(--primary);
+      color: #fff;
+    }
+    .hero-actions .primary-cta:hover {
+      background: var(--primary-dark);
+      box-shadow: var(--shadow-hover);
+    }
+    .hero-actions .secondary-cta {
+      background: var(--surface);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+    }
+    .hero-actions .secondary-cta:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .hero-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-visual svg {
+      width: 100%;
+      max-width: 360px;
+      height: auto;
+    }
+
+    /* 主体布局 - 三栏门户 */
+    .main-layout {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 24px 48px;
+      display: grid;
+      grid-template-columns: 180px 1fr 250px;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .channel-sidebar {
+      position: sticky;
+      top: var(--sticky-offset);
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border);
+      padding: 16px 0;
+      overflow: hidden;
+    }
+    .channel-sidebar h3 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-tertiary);
+      padding: 0 16px 10px;
+      font-weight: 600;
+    }
+    .channel-sidebar ul {
+      list-style: none;
+    }
+    .channel-sidebar li a {
+      display: block;
+      padding: 8px 16px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      border-left: 3px solid transparent;
+      transition: all 0.15s;
+    }
+    .channel-sidebar li a:hover,
+    .channel-sidebar li a:focus-visible {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      border-left-color: var(--primary);
+    }
+    .channel-sidebar li a.active {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      border-left-color: var(--primary);
+      font-weight: 600;
+    }
+
+    .main-content {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .right-sidebar {
+      position: sticky;
+      top: var(--sticky-offset);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* 板块通用 */
+    .section {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border);
+      padding: 22px 24px;
+      box-shadow: var(--shadow-default);
+    }
+    .section h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      letter-spacing: 0.3px;
+      color: var(--text-primary);
+    }
+    .section-sub {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      margin-bottom: 16px;
+    }
+
+    /* 概览 */
+    .overview-text {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+    .overview-text p {
+      margin-bottom: 10px;
+    }
+    .overview-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 精选卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 14px;
+    }
+    .card {
+      background: var(--bg);
+      border-radius: 10px;
+      padding: 14px;
+      border: 1px solid var(--border);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+    .card-title {
+      font-weight: 650;
+      font-size: 15px;
+      color: var(--text-primary);
+      line-height: 1.35;
+    }
+    .card-title a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .card-title a:hover {
+      color: var(--primary);
+    }
+    .card-type {
+      font-size: 11px;
+      color: var(--primary);
+      background: var(--primary-light);
+      padding: 1px 8px;
+      border-radius: var(--radius-tag);
+      display: inline-block;
+      align-self: flex-start;
+      font-weight: 600;
+    }
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+    .card-tags span {
+      font-size: 11px;
+      color: var(--text-tertiary);
+      background: var(--surface);
+      padding: 1px 7px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+    .card-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      flex: 1;
+    }
+    .card-meta {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      display: flex;
+      gap: 10px;
+      margin-top: 4px;
+      border-top: 1px solid var(--border);
+      padding-top: 8px;
+    }
+
+    /* 动态列表 */
+    .update-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .update-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .update-list li:last-child { border-bottom: none; }
+    .update-list .update-name {
+      font-weight: 600;
+      color: var(--text-primary);
+      white-space: nowrap;
+    }
+    .update-list .update-summary {
+      color: var(--text-secondary);
+      font-size: 13px;
+    }
+    .update-list .update-date {
+      margin-left: auto;
+      font-size: 12px;
+      color: var(--text-tertiary);
+      white-space: nowrap;
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .category-item {
+      background: var(--bg);
+      border-radius: 10px;
+      padding: 14px 12px;
+      text-align: center;
+      border: 1px solid var(--border);
+      transition: all 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 500;
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+    .category-item:hover {
+      border-color: var(--primary);
+      background: var(--primary-light);
+      color: var(--primary-dark);
+    }
+    .category-item .cat-count {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      font-weight: 400;
+    }
+
+    /* 深度解析 */
+    .deep-dive h3 {
+      font-size: 17px;
+      font-weight: 650;
+      margin: 18px 0 8px;
+      color: var(--text-primary);
+    }
+    .deep-dive h3:first-of-type { margin-top: 4px; }
+    .deep-dive p {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 10px;
+    }
+    .deep-dive ul {
+      margin: 8px 0 12px 20px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+    .deep-dive li {
+      margin-bottom: 4px;
+    }
+    .deep-dive .insight-box {
+      background: var(--primary-light);
+      border-left: 3px solid var(--primary);
+      padding: 12px 16px;
+      border-radius: 0 8px 8px 0;
+      margin: 14px 0;
+      font-size: 14px;
+      color: var(--text-primary);
+    }
+
+    /* 体验指南 */
+    .guide-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      counter-reset: step;
+    }
+    .guide-step {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 12px 14px;
+      background: var(--bg);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+    .guide-step::before {
+      counter-increment: step;
+      content: counter(step);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 28px;
+      height: 28px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 50%;
+      font-weight: 700;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+    .guide-step-content h4 {
+      font-size: 14px;
+      font-weight: 650;
+      margin-bottom: 2px;
+    }
+    .guide-step-content p {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .faq-list details {
+      border-bottom: 1px solid var(--border);
+      padding: 4px 0;
+    }
+    .faq-list details:last-child { border-bottom: none; }
+    .faq-list summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14.5px;
+      padding: 8px 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-primary);
+    }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::before {
+      content: '+';
+      font-weight: 400;
+      color: var(--primary);
+      font-size: 18px;
+      width: 20px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .faq-list details[open] summary::before {
+      content: '−';
+    }
+    .faq-list .faq-answer {
+      padding: 4px 0 10px 28px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* 评论 */
+    .comment-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .comment-item {
+      display: flex;
+      gap: 10px;
+      padding: 10px 12px;
+      background: var(--bg);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+    .comment-avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+    .comment-body {
+      flex: 1;
+      min-width: 0;
+    }
+    .comment-author {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 1px;
+    }
+    .comment-text {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+    .comment-time {
+      font-size: 11px;
+      color: var(--text-tertiary);
+      margin-top: 3px;
+    }
+
+    /* 资讯 */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .news-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .news-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .news-thumb {
+      width: 100px;
+      height: 68px;
+      border-radius: 6px;
+      object-fit: cover;
+      flex-shrink: 0;
+      background: var(--primary-light);
+    }
+    .news-content h4 {
+      font-size: 14.5px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    .news-content h4 a { color: var(--text-primary); }
+    .news-content h4 a:hover { color: var(--primary); }
+    .news-date {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      margin-bottom: 2px;
+    }
+    .news-summary {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* 相关推荐标签 */
+    .rec-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .rec-tags a {
+      font-size: 13px;
+      padding: 5px 14px;
+      border-radius: var(--radius-tag);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      transition: all 0.2s;
+    }
+    .rec-tags a:hover {
+      background: var(--primary-light);
+      border-color: var(--primary);
+      color: var(--primary-dark);
+    }
+
+    /* 榜单 */
+    .rank-list {
+      list-style: none;
+      counter-reset: rank;
+    }
+    .rank-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+    .rank-list li:last-child { border-bottom: none; }
+    .rank-list li::before {
+      counter-increment: rank;
+      content: counter(rank);
+      font-weight: 700;
+      color: var(--text-tertiary);
+      font-size: 13px;
+      width: 20px;
+      text-align: center;
+    }
+    .rank-list li:nth-child(-n+3)::before {
+      color: var(--primary);
+    }
+    .rank-name { font-weight: 600; color: var(--text-primary); }
+    .rank-score {
+      margin-left: auto;
+      font-size: 12px;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* 右侧辅助栏 */
+    .side-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border);
+      padding: 16px 18px;
+      box-shadow: var(--shadow-default);
+    }
+    .side-card h3 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--text-primary);
+      letter-spacing: 0.3px;
+    }
+    .side-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .side-list li {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.45;
+    }
+    .side-list li a {
+      color: var(--text-secondary);
+    }
+    .side-list li a:hover {
+      color: var(--primary);
+    }
+    .side-list .hot-badge {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      font-size: 10px;
+      padding: 0 6px;
+      border-radius: 8px;
+      margin-right: 6px;
+      font-weight: 600;
+    }
+
+    .side-timeline {
+      list-style: none;
+      position: relative;
+      padding-left: 16px;
+    }
+    .side-timeline::before {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      bottom: 4px;
+      width: 2px;
+      background: var(--border);
+    }
+    .side-timeline li {
+      position: relative;
+      padding: 4px 0;
+      font-size: 12.5px;
+      color: var(--text-secondary);
+    }
+    .side-timeline li::before {
+      content: '';
+      position: absolute;
+      left: -14px;
+      top: 11px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--primary);
+      border: 2px solid var(--surface);
+    }
+    .side-timeline .tl-date {
+      font-size: 11px;
+      color: var(--text-tertiary);
+      display: block;
+    }
+
+    /* 投稿互动板块 */
+    .interact-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .interact-card {
+      background: var(--bg);
+      border-radius: 10px;
+      padding: 16px;
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .interact-card h4 {
+      font-size: 15px;
+      font-weight: 650;
+      color: var(--text-primary);
+    }
+    .interact-card p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      flex: 1;
+    }
+    .interact-card .btn-primary {
+      align-self: flex-start;
+    }
+
+    /* 页尾 */
+    .site-footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 36px 24px 24px;
+    }
+    .footer-inner {
+      max-width: 1360px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 32px;
+    }
+    .footer-brand h4 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .footer-brand p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      max-width: 320px;
+    }
+    .footer-col h5 {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+      letter-spacing: 0.3px;
+    }
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .footer-col ul a {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+    .footer-col ul a:hover { color: var(--primary); }
+    .footer-bottom {
+      max-width: 1360px;
+      margin: 24px auto 0;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 12px;
+      color: var(--text-tertiary);
+    }
+
+    /* 返回顶部 */
+    .back-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s, transform 0.25s;
+      box-shadow: var(--shadow-hover);
+      z-index: 200;
+      font-family: var(--font);
+    }
+    .back-top.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .back-top:hover {
+      transform: translateY(-2px);
+      background: var(--primary-dark);
+    }
+    .back-top:focus-visible {
+      outline: 2px solid var(--primary-dark);
+      outline-offset: 3px;
+    }
+
+    /* 搜索框 */
+    .search-wrap {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+    .search-wrap input {
+      flex: 1;
+      padding: 7px 12px;
+      border-radius: var(--radius-btn);
+      border: 1px solid var(--border);
+      font-size: 13px;
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text-primary);
+      min-width: 0;
+    }
+    .search-wrap input:focus {
+      outline: 2px solid var(--primary);
+      outline-offset: -1px;
+      border-color: var(--primary);
+    }
+    .search-wrap button {
+      padding: 7px 14px;
+      border-radius: var(--radius-btn);
+      border: none;
+      background: var(--primary);
+      color: #fff;
+      font-size: 13px;
+      cursor: pointer;
+      font-family: var(--font);
+      white-space: nowrap;
+    }
+    .search-wrap button:hover { background: var(--primary-dark); }
+    .search-feedback {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      margin-bottom: 8px;
+      min-height: 18px;
+    }
+
+    /* 移动端 */
+    @media (max-width: 1024px) {
+      .main-layout {
+        grid-template-columns: 1fr 240px;
+      }
+      .channel-sidebar {
+        display: none;
+      }
+      .hero {
+        grid-template-columns: 1fr 280px;
+        gap: 24px;
+      }
+      .hero-content h1 { font-size: 32px; }
+      .category-grid { grid-template-columns: repeat(3, 1fr); }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 740px) {
+      .main-layout {
+        grid-template-columns: 1fr;
+      }
+      .right-sidebar {
+        position: static;
+        order: 2;
+      }
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 24px 16px 20px;
+      }
+      .hero-visual {
+        order: -1;
+        max-width: 220px;
+        margin: 0 auto;
+      }
+      .hero-content h1 { font-size: 28px; }
+      .main-layout, .header-inner { padding: 0 16px; }
+      .section { padding: 18px 16px; }
+      .announce-bar {
+        gap: 10px;
+        font-size: 12px;
+        padding: 6px 12px;
+      }
+      .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow-hover);
+        padding: 8px 16px;
+        flex-direction: column;
+        z-index: 90;
+      }
+      .main-nav.open { display: flex; }
+      .header-inner { position: relative; }
+      .hamburger { display: flex; }
+      .header-actions .btn-outline { display: none; }
+      .category-grid { grid-template-columns: repeat(2, 1fr); }
+      .interact-section { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .news-thumb { width: 80px; height: 56px; }
+      .back-top { bottom: 16px; right: 16px; width: 40px; height: 40px; }
+      :root { --sticky-offset: 110px; }
+    }
+
+    .menu-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 80;
+    }
+    .menu-overlay.show { display: block; }
+
+    /* 内容隐藏（筛选） */
+    .filtered-out { display: none !important; }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="sticky-group">
+  <div class="announce-bar" id="announce-bar">
+    <span class="brand-tag">有栖绯花观看</span>
+    <span class="announce-item"><span class="date">11月7日</span><span class="sep">·</span>《密会～人妻的秘めごと～》新作上架</span>
+    <span class="announce-item"><span class="date">11月5日</span><span class="sep">·</span>VR共演作《双镜》评分升至4.7</span>
+    <span class="announce-item"><span class="date">11月3日</span><span class="sep">·</span>本周新增讨论帖47条</span>
+  </div>
+
+  <!-- 页头 -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="17" cy="17" r="15" fill="#c23b5b"/>
+          <path d="M11 13 Q17 7 23 13 Q23 20 17 24 Q11 20 11 13Z" fill="#fff" opacity="0.9"/>
+          <circle cx="14.5" cy="15" r="1.5" fill="#c23b5b"/>
+          <circle cx="19.5" cy="15" r="1.5" fill="#c23b5b"/>
+        </svg>
+        <span>有栖绯花观看</span>
+      </div>
+      <nav class="main-nav" id="main-nav" aria-label="主题导航">
+        <a href="#overview">领域概览</a>
+        <a href="#featured">精选作品</a>
+        <a href="#updates">最新动态</a>
+        <a href="#categories">分类索引</a>
+        <a href="#deep-dive">深度解析</a>
+        <a href="#guide">观看指南</a>
+        <a href="#faq">常见问答</a>
+        <a href="#comments">用户评论</a>
+        <a href="#news">相关资讯</a>
+        <a href="#recommend">相关推荐</a>
+        <a href="#ranking">热门榜单</a>
+      </nav>
+      <div class="header-actions">
+        <button class="btn-outline" type="button" aria-label="搜索作品">搜索</button>
+        <a href="#interact" class="btn-primary">投稿交流</a>
+        <button class="hamburger" id="hamburger-btn" aria-label="打开导航菜单" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<div class="menu-overlay" id="menu-overlay"></div>
+
+<!-- 首屏 -->
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>有栖绯花观看</h1>
+      <p class="hero-desc">聚合有栖绯花近期VR作品、共演名单、发售日历与观众反馈。从《密会》系列到双人共演，按类型、评分和讨论热度索引，找到值得投入时间的条目。</p>
+      <div class="hero-meta">
+        <span><strong>23</strong> 部作品条目</span>
+        <span><strong>4.5</strong> 平均评分</span>
+        <span>更新至 <strong>2026-11-07</strong></span>
+      </div>
+      <div class="hero-actions">
+        <a href="#featured" class="primary-cta">浏览精选作品 →</a>
+        <a href="#guide" class="secondary-cta">观看顺序指南</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 360 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#fce8ec"/>
+            <stop offset="100%" stop-color="#f5d0d9"/>
+          </linearGradient>
+        </defs>
+        <rect x="20" y="30" width="320" height="200" rx="16" fill="url(#hg)"/>
+        <circle cx="180" cy="130" r="58" fill="#c23b5b" opacity="0.15"/>
+        <circle cx="180" cy="130" r="42" fill="#c23b5b" opacity="0.3"/>
+        <path d="M140 120 Q180 80 220 120 Q220 160 180 180 Q140 160 140 120Z" fill="#c23b5b" opacity="0.7"/>
+        <circle cx="165" cy="125" r="6" fill="#fff"/>
+        <circle cx="195" cy="125" r="6" fill="#fff"/>
+        <rect x="60" y="250" width="100" height="8" rx="4" fill="#c23b5b" opacity="0.25"/>
+        <rect x="60" y="266" width="180" height="6" rx="3" fill="#c23b5b" opacity="0.15"/>
+        <rect x="260" y="250" width="40" height="20" rx="10" fill="#c23b5b" opacity="0.2"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 三栏布局 -->
+  <div class="main-layout">
+    <!-- 左频道索引 -->
+    <aside class="channel-sidebar" aria-label="频道索引">
+      <h3>频道索引</h3>
+      <ul>
+        <li><a href="#overview" class="active">领域概览</a></li>
+        <li><a href="#featured">精选作品</a></li>
+        <li><a href="#updates">最新动态</a></li>
+        <li><a href="#categories">分类索引</a></li>
+        <li><a href="#deep-dive">深度解析</a></li>
+        <li><a href="#guide">观看指南</a></li>
+        <li><a href="#faq">常见问答</a></li>
+        <li><a href="#comments">用户评论</a></li>
+        <li><a href="#news">相关资讯</a></li>
+        <li><a href="#recommend">相关推荐</a></li>
+        <li><a href="#ranking">热门榜单</a></li>
+        <li><a href="#interact">投稿交流</a></li>
+      </ul>
+    </aside>
+
+    <!-- 主内容 -->
+    <div class="main-content">
+
+      <!-- 1. 领域概览 -->
+      <section class="section" id="overview">
+        <h2>领域概览</h2>
+        <p class="section-sub">有栖绯花作品的主要类型与当前值得关注的方向</p>
+        <div class="overview-text">
+          <p>有栖绯花自2023年以VR专属标签出道以来，作品形态集中在三个方向：单人VR主观视角、双人共演剧情向、以及近半年增加的多人协作场景。2026年下半年新增的《密会～人妻的秘めごと～》系列把叙事重心放在密闭空间的关系推进上，单部时长从早期的45分钟拉长到72分钟，镜头节奏明显放慢。</p>
+          <p>从观众反馈看，评分分水岭在4.3附近。达到这条线的作品通常具备两个特征：共演对象的配合度在线，以及场景切换不超过三幕。低于4.0的条目多集中在多人协作类——参与人数超过三人后，镜头分配容易失衡。《双镜》是例外，双人VR视角的同步剪辑在10月获得了站内4.7分。</p>
+          <p>当前值得优先关注的条目包括：《密会》第三幕、《双镜》VR共演版、以及10月发售的《夜会》单人长镜头版。后者的争议在于长镜头占比过高，前20分钟几乎没有机位切换，喜欢的人觉得沉浸，不习惯的人在前10分钟就退出。这个分歧本身比评分更值得参考。</p>
+        </div>
+      </section>
+
+      <!-- 2. 精选内容推荐 -->
+      <section class="section" id="featured">
+        <h2>精选作品推荐</h2>
+        <p class="section-sub">按近期讨论热度与评分综合排序</p>
+        <div class="card-grid" id="featured-grid">
+          <div class="card" data-search="密会 人妻 剧情 VR 主观">
+            <span class="card-type">剧情向</span>
+            <div class="card-title"><a href="#featured">《密会～人妻的秘めごと～》第三幕</a></div>
+            <div class="card-tags"><span>密闭空间</span><span>长镜头</span><span>72分钟</span></div>
+            <p class="card-desc">全系列叙事最完整的一幕，从玄关到客厅的动线设计花了心思。中段有长达9分钟的固定机位对话，台词密度高，适合能接受慢节奏的观众。</p>
+            <div class="card-meta"><span>评分 4.6</span><span>11月7日上架</span></div>
+          </div>
+          <div class="card" data-search="双镜 VR 共演 同步 双人">
+            <span class="card-type">VR共演</span>
+            <div class="card-title"><a href="#featured">《双镜》VR共演版</a></div>
+            <div class="card-tags"><span>双人视角</span><span>同步剪辑</span><span>48分钟</span></div>
+            <p class="card-desc">两个机位分别跟随有栖与共演者，观众可切换视角。切换点设在动作衔接处，不打断连贯性。10月评分从4.4升到4.7，靠的是第二幕的同步率。</p>
+            <div class="card-meta"><span>评分 4.7</span><span>10月28日更新</span></div>
+          </div>
+          <div class="card" data-search="夜会 单人 长镜头 沉浸">
+            <span class="card-type">单人VR</span>
+            <div class="card-title"><a href="#featured">《夜会》单人长镜头版</a></div>
+            <div class="card-tags"><span>一镜到底</span><span>低照度</span><span>前20分钟无切换</span></div>
+            <p class="card-desc">争议作。前20分钟只有一个机位，靠灯光和走位推进。喜欢沉浸感的观众给到4.8，但快进率也排同期第一。建议先看预告片判断耐受度。</p>
+            <div class="card-meta"><span>评分 4.3</span><span>10月15日发售</span></div>
+          </div>
+          <div class="card" data-search="雨音 剧情 共演 情感">
+            <span class="card-type">剧情向</span>
+            <div class="card-title"><a href="#featured">《雨音》双人情感线</a></div>
+            <div class="card-tags"><span>室外场景</span><span>情感推进</span><span>65分钟</span></div>
+            <p class="card-desc">少见地把场景放在雨天阳台和车内，对白占三成。共演者对手戏的节奏匹配度高，豆瓣小组有人逐帧分析过两人的眼神调度。</p>
+            <div class="card-meta"><span>评分 4.5</span><span>10月9日上架</span></div>
+          </div>
+          <div class="card" data-search="花影 多人 协作 三幕">
+            <span class="card-type">多人协作</span>
+            <div class="card-title"><a href="#featured">《花影》三人协作场景</a></div>
+            <div class="card-tags"><span>三人</span><span>场景切换</span><span>78分钟</span></div>
+            <p class="card-desc">多人协作里镜头分配较均衡的一部，三幕结构清晰。但第二幕中间有约6分钟的主视角偏移，评论区对这段的必要性有分歧。</p>
+            <div class="card-meta"><span>评分 4.2</span><span>10月3日发售</span></div>
+          </div>
+          <div class="card" data-search="初雪 早期 出道 VR">
+            <span class="card-type">早期作品</span>
+            <div class="card-title"><a href="#featured">《初雪》出道VR作</a></div>
+            <div class="card-tags"><span>2023年</span><span>45分钟</span><span>主观视角</span></div>
+            <p class="card-desc">回看价值大于观赏价值。机位和剪辑比后期作品粗糙，但能看到早期风格里对固定机位的偏好，和现在《夜会》的长镜头策略一脉相承。</p>
+            <div class="card-meta"><span>评分 3.9</span><span>2023年12月</span></div>
+          </div>
+          <div class="card" data-search="午后 日常 单人 轻剧情">
+            <span class="card-type">单人轻剧情</span>
+            <div class="card-title"><a href="#featured">《午后的三小时》</a></div>
+            <div class="card-tags"><span>日常向</span><span>低冲突</span><span>55分钟</span></div>
+            <p class="card-desc">没有明显剧情冲突的日常向作品，靠场景细节撑住。适合不想动脑的时候看，但期待强情节的观众会觉得平。评论区两极分化明显。</p>
+            <div class="card-meta"><span>评分 4.0</span><span>9月22日上架</span></div>
+          </div>
+          <div class="card" data-search="月下 古风 造型 剧情">
+            <span class="card-type">古风剧情</span>
+            <div class="card-title"><a href="#featured">《月下》古装造型篇</a></div>
+            <div class="card-tags"><span>和服</span><span>庭院景</span><span>60分钟</span></div>
+            <p class="card-desc">造型和布景投入是近期最高的一部，庭院实景拍摄。但部分观众认为剧情推进被造型展示拖慢，前15分钟有三次换装过渡。</p>
+            <div class="card-meta"><span>评分 4.1</span><span>9月10日发售</span></div>
+          </div>
+        </div>
+        <div class="search-feedback" id="search-feedback" aria-live="polite"></div>
+      </section>
+
+      <!-- 3. 最新更新/动态 -->
+      <section class="section" id="updates">
+        <h2>最新更新与动态</h2>
+        <p class="section-sub">截至2026年11月8日的条目变动</p>
+        <ul class="update-list">
+          <li><span class="update-name">《密会》第三幕</span><span class="update-summary">新增中文字幕轨，台词翻译由官方账号确认</span><span class="update-date">11-07</span></li>
+          <li><span class="update-name">《双镜》VR共演版</span><span class="update-summary">评分从4.4升至4.7，第二幕同步剪辑被集中讨论</span><span class="update-date">11-05</span></li>
+          <li><span class="update-name">《夜会》单人长镜头版</span><span class="update-summary">快进率数据公开，前10分钟退出率28%</span><span class="update-date">11-04</span></li>
+          <li><span class="update-name">《雨音》</span><span class="update-summary">共演者访谈上线，提到阳台戏拍了四个小时</span><span class="update-date">11-03</span></li>
+          <li><span class="update-name">《花影》</span><span class="update-summary">评论区新增“镜头偏移”时间标记功能</span><span class="update-date">11-01</span></li>
+          <li><span class="update-name">《月下》</span><span class="update-summary">造型设计稿在官方账号发布，共12套</span><span class="update-date">10-30</span></li>
+          <li><span class="update-name">《初雪》</span><span class="update-summary">三周年回顾专题上线，含未公开花絮30秒</span><span class="update-date">10-28</span></li>
+          <li><span class="update-name">《午后的三小时》</span><span class="update-summary">评分从3.8回升至4.0，日常向受众补评</span><span class="update-date">10-25</span></li>
+          <li><span class="update-name">VR作品合集</span><span class="update-summary">秋季 bundle 上架，含6部作品，折扣至11月15日</span><span class="update-date">10-22</span></li>
+          <li><span class="update-name">共演者名单</span><span class="update-summary">11月新作共演者公布，为首次合作的声优出身演员</span><span class="update-date">10-20</span></li>
+        </ul>
+      </section>
+
+      <!-- 4. 分类入口 -->
+      <section class="section" id="categories">
+        <h2>分类索引</h2>
+        <p class="section-sub">按作品形态与场景类型划分</p>
+        <div class="category-grid">
+          <a href="#featured" class="category-item">单人VR主观<span class="cat-count">7部</span></a>
+          <a href="#featured" class="category-item">双人共演<span class="cat-count">5部</span></a>
+          <a href="#featured" class="category-item">多人协作<span class="cat-count">4部</span></a>
+          <a href="#featured" class="category-item">剧情长片<span class="cat-count">6部</span></a>
+          <a href="#featured" class="category-item">日常轻剧情<span class="cat-count">3部</span></a>
+          <a href="#featured" class="category-item">古风造型<span class="cat-count">2部</span></a>
+          <a href="#featured" class="category-item">一镜到底<span class="cat-count">3部</span></a>
+          <a href="#featured" class="category-item">早期出道作<span class="cat-count">4部</span></a>
+        </div>
+      </section>
+
+      <!-- 5. 深度解析 -->
+      <section class="section deep-dive" id="deep-dive">
+        <h2>深度解析</h2>
+        <p class="section-sub">从镜头策略到评分构成，拆解有栖绯花作品的观看价值</p>
+
+        <h3>长镜头的两面：沉浸感与退出率</h3>
+        <p>《夜会》单人长镜头版的前20分钟没有机位切换，这个设计把观众固定在同一个物理位置，靠灯光变化和演员走位推进信息。愿意跟下来的观众给出的评价集中在“像坐在房间里”，而退出的人在前10分钟就走了——站内快进率数据显示，第8到第12分钟是流失最集中的区间，28%的退出发生在这里。</p>
+        <p>把判断拆开看，长镜头的沉浸感来自三个环节：固定机位让空间关系不变、灯光变化代替剪辑提示时间推移、演员走位负责引导视线。三个环节里任何一个掉链子，观众就会开始找快进按钮。《夜会》的问题在第三个环节——第9分钟左右有一段约40秒的走位空档，视线没有落点，弹幕里“在等什么”集中出现在这个时间点。</p>
+        <div class="insight-box">对比《密会》第三幕：同样有长镜头，但每隔2到3分钟就有一次景别变化，退出率控制在12%。长镜头本身不是问题，缺少视线锚点才是。</div>
+
+        <h3>双人共演的评分为什么更稳</h3>
+        <p>统计23部作品的评分分布，双人共演类的平均分4.45，单人主观类4.12，多人协作类3.98。双人共演的优势不在题材本身，而在镜头分配的确定性——两个演员的镜头时长天然有参照，剪辑师不容易在后期失衡。多人协作超过三人后，镜头分配的主观判断空间变大，《花影》第二幕的6分钟主视角偏移就是例证。</p>
+        <p>《双镜》的4.7分可以拆出两个来源：双机位同步剪辑让两个视角的切换点落在动作衔接处，观众不会因为切换而丢失位置感；第二幕有一段两人同框的固定镜头，时长3分20秒，没有台词，全靠肢体配合。这段在评论区被提及的次数是其他片段的3倍。</p>
+
+        <h3>评分与观赏价值的偏差</h3>
+        <p>《初雪》的3.9分不代表不值得看。这部2023年的出道作在机位和剪辑上都有明显粗糙感，但它确立了对固定机位的偏好——全片12个机位里有9个是固定的，这个比例在后来的《夜会》里升到了11/12。对想理解风格演变的观众，这部比高分作品更有信息量。</p>
+        <p>反过来，《午后的三小时》4.0分处在一个微妙位置。日常向作品缺少强情节，评分容易被“期待错位”拉低——给低分的评论里，超过六成提到“太平了”，但这些评论没有区分“平”是设计意图还是执行问题。从场景细节看，餐桌上的物品摆放和窗外的光线变化都有设计，问题在于这些细节不足以支撑55分钟的观看动机。</p>
+        <p>判断一部作品值不值得投入时间，可以按这个顺序核对：先看类型标签是否匹配自己的偏好，再看评分区间内是否有同类作品参照，最后看评论区有没有具体到时间点的分析。三个步骤都过了，踩雷概率会低很多。</p>
+      </section>
+
+      <!-- 6. 体验指南 -->
+      <section class="section" id="guide">
+        <h2>观看路径指南</h2>
+        <p class="section-sub">按耐受度和偏好选择起点</p>
+        <div class="guide-steps">
+          <div class="guide-step">
+            <div class="guide-step-content">
+              <h4>先看《双镜》VR共演版判断是否适应双人视角</h4>
+              <p>双机位切换点设计得比较温和，48分钟时长适中。如果对两个视角来回切换感到头晕，后面可以跳过所有双人共演条目。</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <div class="guide-step-content">
+              <h4>用《密会》第三幕测试对慢节奏剧情的耐受度</h4>
+              <p>72分钟，中段有9分钟固定机位对话。能接受这个节奏，再看《夜会》的长镜头版；中途想快进的，直接从《雨音》开始，对白密度高，信息推进快。</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <div class="guide-step-content">
+              <h4>多人协作类放在最后，先看《花影》试水</h4>
+              <p>三人协作里镜头分配相对均衡的一部。如果第二幕的6分钟偏移让你出戏，同类型其他条目可以全部跳过——偏移问题在多人作里具有普遍性。</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <div class="guide-step-content">
+              <h4>早期作品留到对风格有基本认知之后</h4>
+              <p>《初雪》的机位和剪辑与后期差距明显，先看两部近期作品建立预期，再回头看出道作，能注意到固定机位偏好的延续，而不是停留在画质对比上。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. FAQ -->
+      <section class="section" id="faq">
+        <h2>常见问答</h2>
+        <p class="section-sub">围绕作品类型与观看选择的提问</p>
+        <div class="faq-list">
+          <details>
+            <summary>《密会》系列需要按顺序看吗？</summary>
+            <div class="faq-answer">三幕之间是独立场景，不按顺序不影响理解。但第三幕有前两幕的道具呼应——玄关的伞和客厅的茶杯，按顺序看能注意到这些细节。赶时间的话直接看第三幕，叙事完整度最高。</div>
+          </details>
+          <details>
+            <summary>《夜会》前20分钟没有切换，中途能退出吗？</summary>
+            <div class="faq-answer">可以，但退出后重新进入会从上次位置继续。28%的退出集中在第8到第12分钟，这个区间确实缺少视线引导。建议先看官方放出的前3分钟预览片段，能接受再完整观看。</div>
+          </details>
+          <details>
+            <summary>双人共演类为什么评分普遍比单人高？</summary>
+            <div class="faq-answer">镜头分配的确定性更高。两个演员的镜头时长有天然参照，剪辑阶段不容易失衡。单人作品依赖单机位调度，一旦走位或灯光没跟上，观众注意力会散。多人超过三人后，分配判断空间变大，评分反而回落。</div>
+          </details>
+          <details>
+            <summary>《初雪》画质粗糙，还有观看价值吗？</summary>
+            <div class="faq-answer">出道作的价值在风格线索。全片12个机位里9个固定，这个比例在后期作品里持续上升，《夜会》达到11/12。想理解为什么后来的作品偏爱固定机位，这部比高分作品更直接。</div>
+          </details>
+          <details>
+            <summary>多人协作类里哪一部镜头分配最均衡？</summary>
+            <div class="faq-answer">《花影》三人协作场景。三幕结构清晰，每幕聚焦一个主视角，切换有规律。但第二幕中间有约6分钟的主视角偏移，评论区对这段必要性有分歧。如果对偏移敏感，同类型其他条目可以暂时跳过。</div>
+          </details>
+          <details>
+            <summary>共演者名单在哪里确认？</summary>
+            <div class="faq-answer">每部作品的详情页底部有共演者列表，官方账号在发售前两周会单独发布名单。11月新作的共演者已公布，为首次合作的声优出身演员，具体名字在官方10月20日的公告里。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 8. 用户评论 -->
+      <section class="section" id="comments">
+        <h2>用户评论</h2>
+        <p class="section-sub">来自观看者的真实反馈，含中性评价</p>
+        <div class="comment-list">
+          <div class="comment-item">
+            <div class="comment-avatar">K</div>
+            <div class="comment-body">
+              <div class="comment-author">Kaze_0921</div>
+              <div class="comment-text">《密会》第三幕的玄关戏我反复看了三遍，伞的位置和第一幕呼应上了，这种细节在同类里不多见。</div>
+              <div class="comment-time">11月7日</div>
+            </div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-avatar">M</div>
+            <div class="comment-body">
+              <div class="comment-author">mizu_no_oto</div>
+              <div class="comment-text">《夜会》看到第11分钟实在撑不住了，不是不好，是太慢。喜欢沉浸的人应该会很爱，我属于需要事件推进的类型。</div>
+              <div class="comment-time">11月6日</div>
+            </div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-avatar">T</div>
+            <div class="comment-body">
+              <div class="comment-author">tomo_rail</div>
+              <div class="comment-text">《双镜》第二幕那段3分20秒的同框，没有台词，就靠两个人的站位和呼吸节奏。看完理解了为什么评分能到4.7。</div>
+              <div class="comment-time">11月6日</div>
+            </div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-avatar">A</div>
+            <div class="comment-body">
+              <div class="comment-author">asagiri_</div>
+              <div class="comment-text">《花影》第二幕那个偏移真的有必要吗？六分钟主视角移开，回来的时候感觉断了一截。不是吐槽，是真心想问设计意图。</div>
+              <div class="comment-time">11月5日</div>
+            </div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-avatar">N</div>
+            <div class="comment-body">
+              <div class="comment-author">nagi_77</div>
+              <div class="comment-text">《雨音》阳台戏拍了四个小时这个事，访谈里共演者自己说的，说拍到后面两个人都冻僵了。正片里完全看不出来。</div>
+              <div class="comment-time">11月4日</div>
+            </div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-avatar">H</div>
+            <div class="comment-body">
+              <div class="comment-author">hoshimi_</div>
+              <div class="comment-text">《午后的三小时》我给4分。确实平，但周末下午放着当背景音很合适。低分评论说的“太平”我理解，不过日常向本来就不是冲情节去的。</div>
+              <div class="comment-time">11月3日</div>
+            </div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-avatar">S</div>
+            <div class="comment-body">
+              <div class="comment-author">suzu_ame</div>
+              <div class="comment-text">《月下》的造型是真的下功夫，十二套换装，庭院实景。但前15分钟三次换装过渡，节奏被切得有点碎。造型党和剧情党估计会打起来。</div>
+              <div class="comment-time">11月2日</div>
+            </div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-avatar">R</div>
+            <div class="comment-body">
+              <div class="comment-author">rin_1988</div>
+              <div class="comment-text">回头补了《初雪》，画质确实不能和现在比，但固定机位那个偏好从出道就有了，挺有意思的。</div>
+              <div class="comment-time">11月1日</div>
+            </div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-avatar">Y</div>
+            <div class="comment-body">
+              <div class="comment-author">yuzu_ha</div>
+              <div class="comment-text">秋季 bundle 买了，六部里看过三部，剩下三部里有两部是早期作品。折扣到15号，算下来单部便宜不少。</div>
+              <div class="comment-time">10月31日</div>
+            </div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-avatar">C</div>
+            <div class="comment-body">
+              <div class="comment-author">chika_0x</div>
+              <div class="comment-text">说实话双人共演类的评分有点虚高。两个演员配合好确实加分，但有些条目剧情薄得可以，全靠互动撑着。</div>
+              <div class="comment-time">10月30日</div>
+            </div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-avatar">D</div>
+            <div class="comment-body">
+              <div class="comment-author">d_forest</div>
+              <div class="comment-text">第8到12分钟退出率28%这个数据在哪看的？想核对一下。《夜会》我是第10分钟退的，看到这个数字有种被统计到的感觉。</div>
+              <div class="comment-time">10月29日</div>
+            </div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-avatar">F</div>
+            <div class="comment-body">
+              <div class="comment-author">fuyu_no</div>
+              <div class="comment-text">11月新作的共演者是声优出身，这个组合有点意外。声音表现应该会好，但肢体配合要看了才知道。</div>
+              <div class="comment-time">10月28日</div>
+            </div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-avatar">G</div>
+            <div class="comment-body">
+              <div class="comment-author">grain_sea</div>
+              <div class="comment-text">多人协作类我基本都跳过了，镜头切来切去头晕。双人已经是极限。</div>
+              <div class="comment-time">10月27日</div>
+            </div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-avatar">L</div>
+            <div class="comment-body">
+              <div class="comment-author">luna_tide</div>
+              <div class="comment-text">《密会》第三幕中文字幕终于上了，之前靠听力和画面猜，有些台词的意思完全理解反了。翻译质量还不错。</div>
+              <div class="comment-time">10月26日</div>
+            </div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-avatar">P</div>
+            <div class="comment-body">
+              <div class="comment-author">piko_3</div>
+              <div class="comment-text">有没有人觉得《雨音》的车内戏比阳台戏好？空间小，镜头反而更聚焦。</div>
+              <div class="comment-time">10月25日</div>
+            </div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-avatar">B</div>
+            <div class="comment-body">
+              <div class="comment-author">bamboo_n</div>
+              <div class="comment-text">评分4.3这个分水岭挺准的。我翻了下自己给低分的几部，确实都是多人协作或者镜头分配乱的。</div>
+              <div class="comment-time">10月24日</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. 相关资讯 -->
+      <section class="section" id="news">
+        <h2>相关资讯</h2>
+        <p class="section-sub">近期作品动态与制作消息</p>
+        <div class="news-list">
+          <div class="news-item">
+            <img class="news-thumb" src="https://picsum.photos/seed/mikai-s1/600/400" width="600" height="400" alt="《密会》第三幕玄关场景截图" loading="lazy">
+            <div class="news-content">
+              <h4><a href="#news">《密会》第三幕中文字幕上线，台词翻译由官方账号确认</a></h4>
+              <div class="news-date">2026-11-07</div>
+              <div class="news-summary">字幕轨共187条，玄关戏中一句双关语在翻译时加了注释。官方账号在同日回复中确认，后续两部作品的字幕已在制作中。</div>
+            </div>
+          </div>
+          <div class="news-item">
+            <img class="news-thumb" src="https://picsum.photos/seed/soukyou-s2/600/400" width="600" height="400" alt="《双镜》双机位同步剪辑界面示意" loading="lazy">
+            <div class="news-content">
+              <h4><a href="#news">《双镜》评分升至4.7，第二幕同框段被集中讨论</a></h4>
+              <div class="news-date">2026-11-05</div>
+              <div class="news-summary">评分从10月28日的4.4升至11月5日的4.7。评论区新增讨论集中在第二幕的3分20秒固定镜头，有观众逐帧分析了两人站位的间距变化。</div>
+            </div>
+          </div>
+          <div class="news-item">
+            <img class="news-thumb" src="https://picsum.photos/seed/yakai-s3/600/400" width="600" height="400" alt="《夜会》长镜头低照度场景" loading="lazy">
+            <div class="news-content">
+              <h4><a href="#news">《夜会》快进率数据公开，前10分钟退出率28%</a></h4>
+              <div class="news-date">2026-11-04</div>
+              <div class="news-summary">站内统计显示第8到第12分钟是流失高峰，第9分钟一段40秒的走位空档期间弹幕密度最高。制作方未对此数据作出回应。</div>
+            </div>
+          </div>
+          <div class="news-item">
+            <img class="news-thumb" src="https://picsum.photos/seed/amaoto-s4/600/400" width="600" height="400" alt="《雨音》雨天阳台场景" loading="lazy">
+            <div class="news-content">
+              <h4><a href="#news">《雨音》共演者访谈：阳台戏拍了四小时</a></h4>
+              <div class="news-date">2026-11-03</div>
+              <div class="news-summary">访谈中提到拍摄当天实际降雨，为等雨声与台词节奏匹配，同一段戏重拍七次。车内戏份在次日补拍，用了一整天。</div>
+            </div>
+          </div>
+          <div class="news-item">
+            <img class="news-thumb" src="https://picsum.photos/seed/hanakage-s5/600/400" width="600" height="400" alt="《花影》三人协作场景布局" loading="lazy">
+            <div class="news-content">
+              <h4><a href="#news">《花影》评论区新增时间标记功能</a></h4>
+              <div class="news-date">2026-11-01</div>
+              <div class="news-summary">观众可在评论中标注具体时间点，点击跳转至对应片段。功能上线首日，第二幕6分钟偏移段被标记了23次，为全片最高。</div>
+            </div>
+          </div>
+          <div class="news-item">
+            <img class="news-thumb" src="https://picsum.photos/seed/tsukishita-s6/600/400" width="600" height="400" alt="《月下》庭院实景造型" loading="lazy">
+            <div class="news-content">
+              <h4><a href="#news">《月下》造型设计稿发布，共12套</a></h4>
+              <div class="news-date">2026-10-30</div>
+              <div class="news-summary">设计稿包含和服配色方案与庭院布景平面图。其中三套造型未在正片中完整出现，官方说明是剪辑时出于时长考虑删减。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. 相关推荐 -->
+      <section class="section" id="recommend">
+        <h2>相关推荐</h2>
+        <p class="section-sub">按类型与观看场景延伸的条目</p>
+        <div class="rec-tags">
+          <a href="#featured">密闭空间剧情向</a>
+          <a href="#featured">双机位同步剪辑</a>
+          <a href="#featured">一镜到底实验作</a>
+          <a href="#featured">雨天室外场景</a>
+          <a href="#featured">和服庭院造型</a>
+          <a href="#featured">日常低冲突条目</a>
+          <a href="#featured">三人协作镜头分配</a>
+          <a href="#featured">2023年出道作品</a>
+        </div>
+      </section>
+
+      <!-- 11. 热门榜单 -->
+      <section class="section" id="ranking">
+        <h2>热门榜单</h2>
+        <p class="section-sub">按站内观看完成度与互动量综合排序（截至11月8日）</p>
+        <ol class="rank-list">
+          <li><span class="rank-name">《双镜》VR共演版</span><span class="rank-score">4.7</span></li>
+          <li><span class="rank-name">《密会～人妻的秘めごと～》第三幕</span><span class="rank-score">4.6</span></li>
+          <li><span class="rank-name">《雨音》双人情感线</span><span class="rank-score">4.5</span></li>
+          <li><span class="rank-name">《夜会》单人长镜头版</span><span class="rank-score">4.3</span></li>
+          <li><span class="rank-name">《花影》三人协作场景</span><span class="rank-score">4.2</span></li>
+          <li><span class="rank-name">《月下》古装造型篇</span><span class="rank-score">4.1</span></li>
+          <li><span class="rank-name">《午后的三小时》</span><span class="rank-score">4.0</span></li>
+          <li><span class="rank-name">《初雪》出道VR作</span><span class="rank-score">3.9</span></li>
+        </ol>
+      </section>
+
+      <!-- 互动板块 -->
+      <section class="section" id="interact">
+        <h2>投稿与交流</h2>
+        <p class="section-sub">分享观看笔记与共演者讨论</p>
+        <div class="interact-section">
+          <div class="interact-card">
+            <h4>作品短评投稿</h4>
+            <p>看完一部作品，写下300字以内的具体观察。可以是一个镜头、一句台词，或者共演者的配合细节。审核后进入条目评论区。</p>
+            <button class="btn-primary" type="button">写短评</button>
+          </div>
+          <div class="interact-card">
+            <h4>共演者讨论区</h4>
+            <p>围绕11月新作共演者展开讨论。声优出身的演员在声音表现上有优势，肢体配合表现待正片验证。已有37条讨论。</p>
+            <button class="btn-primary" type="button">进入讨论</button>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /main-content -->
+
+    <!-- 右辅助栏 -->
+    <aside class="right-sidebar" aria-label="辅助信息">
+      <div class="side-card">
+        <h3>内容查找</h3>
+        <div class="search-wrap">
+          <input type="text" id="side-search" placeholder="输入作品名或类型" aria-label="搜索作品">
+          <button type="button" id="side-search-btn">查找</button>
+        </div>
+        <div class="search-feedback" id="side-search-feedback" aria-live="polite"></div>
+      </div>
+
+      <div class="side-card">
+        <h3>本周热榜</h3>
+        <ul class="side-list">
+          <li><span class="hot-badge">1</span><a href="#featured">《双镜》VR共演版</a></li>
+          <li><span class="hot-badge">2</span><a href="#featured">《密会》第三幕</a></li>
+          <li><span class="hot-badge">3</span><a href="#featured">《雨音》双人情感线</a></li>
+          <li><span class="hot-badge">4</span><a href="#featured">《夜会》长镜头版</a></li>
+          <li><span class="hot-badge">5</span><a href="#featured">《花影》三人协作</a></li>
+        </ul>
+      </div>
+
+      <div class="side-card">
+        <h3>发售时间线</h3>
+        <ul class="side-timeline">
+          <li><span class="tl-date">2026-11-07</span>《密会》第三幕上架</li>
+          <li><span class="tl-date">2026-10-28</span>《双镜》VR共演版更新</li>
+          <li><span class="tl-date">2026-10-15</span>《夜会》长镜头版发售</li>
+          <li><span class="tl-date">2026-10-09</span>《雨音》双人情感线上架</li>
+          <li><span class="tl-date">2026-10-03</span>《花影》三人协作发售</li>
+        </ul>
+      </div>
+
+      <div class="side-card">
+        <h3>条目速览</h3>
+        <ul class="side-list">
+          <li>已收录作品：23部</li>
+          <li>平均评分：4.5</li>
+          <li>双人共演占比：22%</li>
+          <li>最近更新：2026-11-07</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<!-- 页尾 -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h4>有栖绯花观看</h4>
+      <p>覆盖2023年至2026年11月的23部作品条目，类型含单人VR、双人共演、多人协作与古风剧情。每周更新评分与讨论摘要，月度整理发售时间线。</p>
+    </div>
+    <div class="footer-col">
+      <h5>作品类型</h5>
+      <ul>
+        <li><a href="#featured">单人VR主观</a></li>
+        <li><a href="#featured">双人共演</a></li>
+        <li><a href="#featured">多人协作</a></li>
+        <li><a href="#featured">剧情长片</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>内容板块</h5>
+      <ul>
+        <li><a href="#deep-dive">深度解析</a></li>
+        <li><a href="#guide">观看指南</a></li>
+        <li><a href="#faq">常见问答</a></li>
+        <li><a href="#ranking">热门榜单</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>互动</h5>
+      <ul>
+        <li><a href="#comments">用户评论</a></li>
+        <li><a href="#interact">短评投稿</a></li>
+        <li><a href="#interact">共演者讨论</a></li>
+        <li><a href="#news">相关资讯</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 有栖绯花观看内容聚合 · 示例条目与数据仅用于内容展示</span>
+    <span>最近更新：2026-11-08 · 对应《密会》第三幕字幕上线</span>
+  </div>
+</footer>
+
+<button class="back-top" id="back-top" aria-label="回到顶部">↑</button>
+
+<script>
+  (function() {
+    // 移动端菜单
+    var hamburger = document.getElementById('hamburger-btn');
+    var mainNav = document.getElementById('main-nav');
+    var overlay = document.getElementById('menu-overlay');
+
+    function closeMenu() {
+      if (!mainNav || !hamburger) return;
+      mainNav.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      if (overlay) overlay.classList.remove('show');
+    }
+
+    function toggleMenu() {
+      if (!mainNav || !hamburger) return;
+      var isOpen = mainNav.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      if (overlay) overlay.classList.toggle('show', isOpen);
+    }
+
+    if (hamburger) {
+      hamburger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggleMenu();
+      });
+    }
+
+    if (overlay) {
+      overlay.addEventListener('click', closeMenu);
+    }
+
+    // 点击导航项后关闭
+    if (mainNav) {
+      mainNav.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          closeMenu();
+        });
+      });
+    }
+
+    // Esc 关闭
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeMenu();
+      }
+    });
+
+    // 返回顶部
+    var backTop = document.getElementById('back-top');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > window.innerHeight) {
+        backTop.classList.add('visible');
+      } else {
+        backTop.classList.remove('visible');
+      }
+    }, { passive: true });
+
+    if (backTop) {
+      backTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    // 搜索筛选
+    function performSearch(query, gridId, feedbackId) {
+      var grid = document.getElementById(gridId);
+      var feedback = document.getElementById(feedbackId);
+      if (!grid) return;
+      var cards = grid.querySelectorAll('.card');
+      var q = (query || '').trim().toLowerCase();
+      var visibleCount = 0;
+      cards.forEach(function(card) {
+        var text = (card.getAttribute('data-search') || '') + ' ' + card.textContent.toLowerCase();
+        if (!q || text.indexOf(q) !== -1) {
+          card.classList.remove('filtered-out');
+          visibleCount++;
+        } else {
+          card.classList.add('filtered-out');
+        }
+      });
+      if (feedback) {
+        if (!q) {
+          feedback.textContent = '';
+        } else if (visibleCount === 0) {
+          feedback.textContent = '没有找到与「' + query + '」匹配的作品，试试「密会」「双镜」或「VR共演」。';
+        } else {
+          feedback.textContent = '找到 ' + visibleCount + ' 部匹配作品。';
+        }
+      }
+    }
+
+    // 侧栏搜索
+    var sideSearchBtn = document.getElementById('side-search-btn');
+    var sideSearchInput = document.getElementById('side-search');
+    if (sideSearchBtn && sideSearchInput) {
+      sideSearchBtn.addEventListener('click', function() {
+        performSearch(sideSearchInput.value, 'featured-grid', 'side-search-feedback');
+      });
+      sideSearchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          performSearch(sideSearchInput.value, 'featured-grid', 'side-search-feedback');
+        }
+      });
+    }
+
+    // 侧栏滚动高亮
+    var sections = document.querySelectorAll('.section[id], section[id]');
+    var sidebarLinks = document.querySelectorAll('.channel-sidebar a');
+    if (sections.length && sidebarLinks.length) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            sidebarLinks.forEach(function(link) {
+              link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+            });
+          }
+        });
+      }, { rootMargin: '-140px 0px -60% 0px', threshold: 0 });
+      sections.forEach(function(sec) { observer.observe(sec); });
+    }
+
+    // 点击空白关闭菜单
+    document.addEventListener('click', function(e) {
+      if (!mainNav || !hamburger) return;
+      if (!mainNav.classList.contains('open')) return;
+      if (mainNav.contains(e.target) || hamburger.contains(e.target)) return;
+      closeMenu();
+    });
+  })();
+</script>
+
+<!-- 结构化数据 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "有栖绯花观看",
+  "description": "有栖绯花作品条目聚合与观看指南，涵盖VR作品、共演名单、发售时间线与用户反馈。",
+  "about": {
+    "@type": "Person",
+    "name": "有栖绯花"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "《密会》系列需要按顺序看吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "三幕之间是独立场景，不按顺序不影响理解。但第三幕有前两幕的道具呼应——玄关的伞和客厅的茶杯，按顺序看能注意到这些细节。赶时间的话直接看第三幕，叙事完整度最高。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "《夜会》前20分钟没有切换，中途能退出吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以，但退出后重新进入会从上次位置继续。28%的退出集中在第8到第12分钟，这个区间确实缺少视线引导。建议先看官方放出的前3分钟预览片段，能接受再完整观看。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "双人共演类为什么评分普遍比单人高？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "镜头分配的确定性更高。两个演员的镜头时长有天然参照，剪辑阶段不容易失衡。单人作品依赖单机位调度，一旦走位或灯光没跟上，观众注意力会散。多人超过三人后，分配判断空间变大，评分反而回落。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "《初雪》画质粗糙，还有观看价值吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "出道作的价值在风格线索。全片12个机位里9个固定，这个比例在后期作品里持续上升，《夜会》达到11/12。想理解为什么后来的作品偏爱固定机位，这部比高分作品更直接。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "多人协作类里哪一部镜头分配最均衡？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "《花影》三人协作场景。三幕结构清晰，每幕聚焦一个主视角，切换有规律。但第二幕中间有约6分钟的主视角偏移，评论区对这段必要性有分歧。如果对偏移敏感，同类型其他条目可以暂时跳过。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "共演者名单在哪里确认？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "每部作品的详情页底部有共演者列表，官方账号在发售前两周会单独发布名单。11月新作的共演者已公布，为首次合作的声优出身演员，具体名字在官方10月20日的公告里。"
+      }
+    }
+  ]
+}
+</script>
+
+</body>
+          </html>
